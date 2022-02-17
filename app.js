@@ -2,7 +2,7 @@ const express = require("express");
 const passport = require('passport');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
-const logger = require("morgan");
+// const logger = require("morgan");
 require('./authentication/passport');
 require('dotenv').config();
  
@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 3000;
 
 const server = express();
 
-server.use(logger("dev"));
+// server.use(logger("dev"));
 
 server.use(express.json());
 server.use(express.urlencoded({ extended: false })); 
