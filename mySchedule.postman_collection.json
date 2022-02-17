@@ -1,0 +1,699 @@
+{
+	"info": {
+		"_postman_id": "b6e13199-f62d-46ea-9b5e-d10e6d16c699",
+		"name": "mySchedule",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Teachers",
+			"item": [
+				{
+					"name": "Teachers list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://my-schedulee.herokuapp.com/teachers",
+							"protocol": "https",
+							"host": [
+								"my-schedulee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"teachers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get an specific teacher",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://my-schedulee.herokuapp.com/teachers/:id",
+							"protocol": "https",
+							"host": [
+								"my-schedulee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"teachers",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6209146fa0996a38cf5e0f0b",
+									"description": "Id of the teacher"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a teacher",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Alfonso",
+									"type": "text"
+								},
+								{
+									"key": "DNI",
+									"value": "12335678C",
+									"type": "text"
+								},
+								{
+									"key": "department",
+									"value": "Physics",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://my-schedulee.herokuapp.com/teachers",
+							"protocol": "https",
+							"host": [
+								"my-schedulee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"teachers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit a teacher",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://my-schedulee.herokuapp.com/teachers/:id",
+							"protocol": "https",
+							"host": [
+								"my-schedulee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"teachers",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "Id of the teacher"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a teacher",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://my-schedulee.herokuapp.com/teachers/:id",
+							"protocol": "https",
+							"host": [
+								"my-schedulee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"teachers",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "Id of the teacher"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Subjects",
+			"item": [
+				{
+					"name": "Subjects list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://my-schedulee.herokuapp.com/subjects",
+							"protocol": "https",
+							"host": [
+								"my-schedulee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"subjects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get an specific Subject",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://my-schedulee.herokuapp.com/cinemas/:id",
+							"protocol": "https",
+							"host": [
+								"my-schedulee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cinemas",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "Id of the subject"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a Subject",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Mathematics I\",\r\n    \"ECTS\": 12,\r\n    \"department\": \"Mathematics\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://my-schedulee.herokuapp.com/subjects",
+							"protocol": "https",
+							"host": [
+								"my-schedulee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"subjects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit a Subject",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://my-schedulee.herokuapp.com/subjects/:id",
+							"protocol": "https",
+							"host": [
+								"my-schedulee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"subjects",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "Id of the subject"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add a teacher to a Subject",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"teacherId\":\"6209146fa0996a38cf5e0f0b\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://my-schedulee.herokuapp.com/subjects/:id/teachers",
+							"protocol": "https",
+							"host": [
+								"my-schedulee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"subjects",
+								":id",
+								"teachers"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "620914e732f304713bb5b458",
+									"description": "Id of the subject"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Subject",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://my-schedulee.herokuapp.com/subject/:id",
+							"protocol": "https",
+							"host": [
+								"my-schedulee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"subject",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "Id of the subject"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Time Slots",
+			"item": [
+				{
+					"name": "Time Slots list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://my-schedulee.herokuapp.com/timeSlots",
+							"protocol": "https",
+							"host": [
+								"my-schedulee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"timeSlots"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get an specific Time Slot",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://my-schedulee.herokuapp.com/timeSlots/:id",
+							"protocol": "https",
+							"host": [
+								"my-schedulee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"timeSlots",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "Id of the Time Slot"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a Time Slot",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"startTime\": \"08:00\",\r\n    \"endTime\": \"10:00\",\r\n    \"date\":\"01-02-2022\",\r\n    \"room\":123\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://my-schedulee.herokuapp.com/timeSlots",
+							"protocol": "https",
+							"host": [
+								"my-schedulee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"timeSlots"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit a Time Slot",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://my-schedulee.herokuapp.com/timeSlots/:id",
+							"protocol": "https",
+							"host": [
+								"my-schedulee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"timeSlots",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "Id of the timeSlot"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add subject to Time Slot",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subjectId\":\"620914e732f304713bb5b458\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://my-schedulee.herokuapp.com/:id/subject",
+							"protocol": "https",
+							"host": [
+								"my-schedulee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								":id",
+								"subject"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6209155b32f304713bb5b469",
+									"description": "Id of the time slot"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Time Slot",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://my-schedulee.herokuapp.com/:id",
+							"protocol": "https",
+							"host": [
+								"my-schedulee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "Id of the time slot"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Add time slot to User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"timeSlotId\":\"6209155b32f304713bb5b469\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://my-schedulee.herokuapp.com/users/timeSlot",
+							"protocol": "https",
+							"host": [
+								"my-schedulee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"timeSlot"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete an user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://my-schedulee.herokuapp.com/users/:id",
+							"protocol": "https",
+							"host": [
+								"my-schedulee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "Id of the user"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Pepe\",\r\n    \"DNI\":\"12345679B\",\r\n    \"degree\":\"Bachelor's Computer Science\",\r\n    \"email\":\"pepe@gmail.com\",\r\n    \"password\":\"/sf8-Q<~zkwsK2WJ\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://my-schedulee.herokuapp.com/users/register",
+							"protocol": "https",
+							"host": [
+								"my-schedulee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"juan@gmail.com\",\r\n    \"password\":\"/sf8-Q<~zkwsK2WJ\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://my-schedulee.herokuapp.com/users/login",
+							"protocol": "https",
+							"host": [
+								"my-schedulee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"pepe@gmail.com\",\r\n    \"password\":\"/sf8-Q<~zkwsK2WJ\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://my-schedulee.herokuapp.com/users/logout",
+							"protocol": "https",
+							"host": [
+								"my-schedulee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
